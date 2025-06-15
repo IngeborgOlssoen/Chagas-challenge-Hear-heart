@@ -1,22 +1,10 @@
-# Ignore virtual environment directory
-venv/
-
-#Ignore dataset downloads and outputs
-ptbxl_input/
-samitrop_input/
-physionet.org/
-
-samitrop_output/
-ptbxl_output/
-
-samitrop_train/
-
-dataset/train/
-dataset/val/
-
-holdout_data/
-val_outputs/
-
-holdout_outputs/
-
-HearHeart/
+*.pt
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.out
+*.ipynb_save
