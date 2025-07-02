@@ -155,7 +155,7 @@ def load_model(model_folder, verbose):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     final_model_path = os.path.join(model_folder, "final_model.pt")
     if os.path.exists(final_model_path):
-        from s4d import S4D
+        from src.models.s4.s4d import S4D
         class S4Model(nn.Module):
             def __init__(self, d_input=12, d_output=1, d_model=128, n_layers=4, dropout=0.1, prenorm=False):
                 super().__init__()
