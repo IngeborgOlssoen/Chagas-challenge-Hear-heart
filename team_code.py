@@ -127,7 +127,7 @@ def run_model(record, models, verbose):
         if verbose:
             for name, (pred, prob) in model_predictions.items():
                 print(f"{name:>15}: pred={pred}, prob={prob:.4f}, weight={weights[name]:.2f}")
-            print(f"\n🧩 Final avg prob: {avg_prob:.4f} → Prediction: {final_pred}")
+            print(f"\nFinal avg prob: {avg_prob:.4f} → Prediction: {final_pred}")
 
     else:
         # Single model mode
@@ -139,7 +139,7 @@ def run_model(record, models, verbose):
         final_pred = int(avg_prob >= 0.65)
 
         if verbose:
-            print(f"🔍 final_model.pt: prob={avg_prob:.4f} → Prediction: {final_pred}")
+            print(f"final_model.pt: prob={avg_prob:.4f} → Prediction: {final_pred}")
 
     output_dir = "holdout_outputs"
     os.makedirs(output_dir, exist_ok=True)
